@@ -8,11 +8,23 @@
 
 import UIKit
 
-class AfterLogin: UIViewController {
+class AfterLogin: UIViewController,UITextFieldDelegate {
+    
+    @objc public var Output = ""
+    @objc public static var name = ""
 
+    @IBOutlet weak var status: UILabel!
+    
+    @IBOutlet weak var helloLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(Output)
+        status.text = Output
+        helloLabel.text = "Hello , \(AfterLogin.name)"
+        performSegue(withIdentifier: "chatboxes", sender: self)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -20,6 +32,24 @@ class AfterLogin: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        
+        print(Output)
+        status.text = Output
+        self.view.endEditing(true)
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+
     
 
     /*

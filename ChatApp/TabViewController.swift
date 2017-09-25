@@ -21,6 +21,14 @@ class TabViewController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination == ProfileViewController() {
+            
+            print("Going to profile view controller")
+            
+        }
+    }
+    
 
     /*
     // MARK: - Navigation

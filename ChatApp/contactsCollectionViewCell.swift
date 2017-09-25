@@ -10,4 +10,35 @@ import UIKit
 
 class contactsCollectionViewCell: UICollectionViewCell {
     
+    @objc var textLabel = UILabel()
+    
+    @objc var imageView = UIImageView()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        addSubview(imageView)
+        
+        addSubview(textLabel)
+        textLabel.alpha = 0.5
+        textLabel.text = "loading..."
+        textLabel.backgroundColor = .black
+        textLabel.textAlignment = .center
+
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+
+  
+    
+    
+    
+    
+    
+    
 }

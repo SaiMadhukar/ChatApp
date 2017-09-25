@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import ChatApp
+@testable import Pods_ChatAppTests
 
 class ChatAppTests: XCTestCase {
     
