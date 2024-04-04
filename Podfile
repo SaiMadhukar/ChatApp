@@ -18,10 +18,5 @@ target 'ChatApp' do
     # Pods for testing
   end
 
-  target 'ChatAppUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end
 #Chandana comment
